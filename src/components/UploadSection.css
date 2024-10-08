@@ -1,0 +1,814 @@
+.upload-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0f253a;
+  background-image: repeating-linear-gradient(161deg, transparent, transparent 10px, rgba(255, 255, 255, .05) 10px, rgba(255, 255, 255, .05) 11px), repeating-linear-gradient(13deg, transparent, transparent 10px, rgba(255, 255, 255, .05) 10px, rgba(255, 255, 255, .05) 11px);
+  color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 100%; 
+  z-index: 2;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between logo and nav links */
+}
+
+.logo {
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 80px; /* Adjust as needed */
+  cursor: pointer;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center; 
+  margin-left: auto; /* Push nav links to the center */
+  margin-right: auto; /* Ensure the nav links are centered */
+  padding-right: 200px;
+}
+
+.nav-link {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.6875rem;
+  letter-spacing: 1.8px;
+  padding: 1.625rem 1.5rem;
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Set text color */
+  margin-left: 20px; /* Space between nav links */
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #672024; /* Change color on hover */
+}
+
+.upload-section-title {
+  text-align: center;
+  margin-top: -10px;
+  background-color: #f5f3f0;
+}
+
+.upload-section-title h1 {
+  font-size: 1.5rem;
+  padding: 20px 250px;
+  color: #000;
+  letter-spacing: -0px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.upload-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 80px;
+    border-radius: 12px;
+    color: #fff;
+    position: relative;
+    min-height: calc(100vh - 50px);
+    z-index: 1;
+  }
+  
+  .upload-section > * {
+    position: relative;
+  }
+  
+  .upload-text {
+    flex: 2;
+    max-width: 50%;
+    height: 100%;
+    top: 20px;
+  }
+  
+  .upload-text h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 110%;
+    color: #080f17;
+    letter-spacing: -1.6px;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .upload-text span {
+    color: #672024;
+  }
+  
+  .upload-text p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #080f17;
+    line-height: 2.25rem;
+    margin-bottom: 20px;
+    margin-right: 50px;
+  }
+  
+  .upload-area {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 30px;
+    background: transparent;
+  }
+
+  .upload-area h2 {
+    color: #111;
+    font-family: "Titillium Web", sans-serif;
+      font-weight: 300;
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  
+  .drag-drop-box {
+    width: 100%;
+    height: 200px;
+    background-color:#f5f3f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+    cursor: pointer;
+  }
+  
+
+  .file-types {
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  .drive-link-input {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 0px;
+    border: 0px solid #ccc;
+    background-color: #f5f3f0;
+    color: #333;
+    margin-top: 10px;
+    transition: border-color 0.3s ease;
+    font-family: "Titillium Web", sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  /* File list styles */
+  .file-list {
+    width: 100%;
+    max-height: 200px;
+    padding: 20px 0;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0);
+  }
+
+  .file-list a {
+    text-decoration: none;
+    color: #672024;
+  }
+  
+  .file-list h3 {
+    color: #111;
+    font-family: "Titillium Web", sans-serif;
+      font-weight: 300;
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+  }
+  
+  .file-list ul {
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 150px;
+  }
+  
+  .file-list li {
+    padding: 8px 0;
+    color: #672024;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .login-register-buttons {
+    position: absolute;
+    top: 20px;
+    right: 150px;
+  } 
+  
+  .register-btn {
+    font-weight: 600;
+    line-height: 125%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1.44px;
+    background: -webkit-linear-gradient(73deg, #030507 12.05%, #11293e 88.83%);
+    background: linear-gradient(17deg, #030507 12.05%, #11293e 88.83%);
+    color: #f5f3f0;
+    padding: 0.9rem 1.875rem;
+    border: 1px solid rgba(244, 242, 240, .1);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .3);
+    border-radius: 3.75rem;
+    font-family: "Titillium Web", sans-serif;
+    margin-right: 20px;
+  }
+
+  .login-btn {
+    font-weight: 600;
+    line-height: 125%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1.44px;
+    background: -webkit-linear-gradient(73deg, #030507 12.05%, #11293e 88.83%);
+    background: linear-gradient(180deg, #5b161a 0%, #3e0d10 100%);
+    color: #f5f3f0;
+    padding: 0.9rem 1.875rem;
+    border: 1px solid rgba(244, 242, 240, .1);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .3);
+    border-radius: 3.75rem;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .login-btn:hover {
+    background-color: #333;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal content */
+  .modal-content {
+    font-family: "Titillium Web", sans-serif;
+    background-color: #fff;
+    width: 700px; /* Increased width to accommodate the two columns */
+    max-width: 90%;
+    display: flex; /* Flex layout for the left and right columns */
+    padding: 0px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .close-btn:hover {
+    color: #333;
+  }
+  
+  /* Modal left section (title and subtitle) */
+  .modal-left {
+    flex: 1;
+    padding: 20px;
+    background: -webkit-linear-gradient(73deg, #030507 12.05%, #11293e 88.83%);
+    background: linear-gradient(17deg, #030507 12.05%, #11293e 88.83%);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .modal-left h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 110%;
+    color: #f3f2f0;
+    letter-spacing: -1.6px;
+  }
+  
+  .modal-left p {
+    font-size: 16px;
+    color: #eee;
+  }
+  
+  /* Modal right section (form) */
+  .modal-right {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .modal-right h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 110%;
+    color: #5b161a;
+    letter-spacing: -1.6px;
+  }
+
+  .modal-btn {
+    font-weight: 500;
+    line-height: 125%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1.44px;
+    background: -webkit-linear-gradient(73deg, #030507 12.05%, #11293e 88.83%);
+    background: linear-gradient(180deg, #5b161a 0%, #3e0d10 100%);
+    color: #f5f3f0;
+    padding: 12px 1.5rem;
+    border: 1px solid rgba(244, 242, 240, .1);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .3);
+    border-radius: 3.75rem;
+    font-family: "Titillium Web", sans-serif;
+    width: fit-content;
+    margin-top: 20px;
+  }
+  
+  /* Input fields */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 0px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color:#f5f3f0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      flex-direction: column;
+      width: 90%; /* Adapt modal width for smaller screens */
+    }
+  
+    .modal-left {
+      border-radius: 10px 10px 0 0;
+    }
+  
+    .modal-right {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    .upload-section {
+      flex-direction: column;
+      padding: 20px;
+      margin-bottom: 50px;
+      height: auto;
+    }
+  
+    .upload-text {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 0px;
+    }
+  
+    .upload-text h2 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-top: 20px;
+    }
+  
+    .upload-text p {
+      font-size: 1rem;
+      margin: 20px 0;
+      margin-left: 0;
+      margin-right: 0;
+      line-height: 1.75rem;
+    }
+  
+    .upload-area {
+      max-width: 100%;
+      padding-top: 10px;
+    }
+  
+    .upload-area h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .drag-drop-box {
+      height: 150px;
+      font-size: 1rem;
+    }
+  
+    .upload-button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+    }
+  
+    .file-types {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  
+    .drive-link-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+    }
+  
+    .file-list h3 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .file-list ul {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    .register-btn {
+      top: 24px;
+      padding: 14px 24px;
+      font-size: 1rem;
+    }
+  
+    .login-btn {
+      top: 24px;
+      padding: 14px 24px;
+      font-size: 1rem;
+    }
+  
+    .modal-content {
+      width: 90%;
+      height: auto;
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .modal-left {
+      display: none; /* Hides the background image for mobile */
+    }
+  
+    .modal-right {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .modal-right input {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  
+    .modal-right button {
+      padding: 8px;
+      font-size: 1rem;
+    }
+
+    .login-register-buttons {
+      top: 20px;
+      right: 10px;
+    } 
+    
+    .logo {
+      margin-left: 20px;
+    }
+  }
+
+
+  /* Profile button */
+.profile-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 1rem;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-btn .arrow {
+  margin-left: 10px;
+}
+
+.arrow {
+  color: rgb(171, 171, 171);
+}
+
+.profile-btn:hover {
+  background-color: #eaeaea;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown menu */
+.profile-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 500;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f9f9f9;
+}
+
+.dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.credits-info {
+  margin-right: 150px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #eee; /* Adjust color based on your theme */
+}
+
+
+
+
+/* Hamburger Menu Styling */
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 25px; /* Adjust as needed for vertical alignment */
+  right: 50px; /* Position it on the right */
+  width: 50px; /* Make the container wider for a larger clickable area */
+  height: 40px;
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+.hamburger-icon::before {
+  top: -10px;
+}
+
+.hamburger-icon::after {
+  top: 10px;
+}
+
+/* Open state for the hamburger */
+.hamburger-icon.open {
+  transform: rotate(45deg);
+}
+
+.hamburger-icon.open::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.hamburger-icon.open::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+  position: absolute;
+  top: 80px; /* Adjust based on header height */
+  right: 0px;
+  background-color: #fff;
+  width: 200px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+  color: #030507;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  padding: 10px 0;
+}
+
+.mobile-menu ul li a {
+  color: #030507;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+}
+
+.mobile-menu p {
+  font-size: 1.3rem;
+  padding: 20px;
+}
+
+.mobile-menu ul li a:hover {
+  background-color: #eee;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  .credits-info {
+    position: absolute;
+  top: 40px; /* Adjust as needed for vertical alignment */
+  left: 41%; /* Position it on the right */
+  width: 100px;
+  }
+
+  .nav-links {
+    display: none; /* Hide desktop menu on mobile screens */
+  }
+  .hamburger {
+    display: block; /* Show hamburger menu on mobile screens */
+    right: 50px;
+    top: 50px;
+  }
+  .upload-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mobile-menu {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .upload-section-title h1 {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    letter-spacing: 0;
+  }
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input input {
+  width: 100%; /* Make sure it takes full width */
+  padding-right: 30px; /* Space for the icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px; /* Adjust as necessary */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666; /* Change color as needed */
+}
+
+
+/* Background overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Popup box */
+.popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  min-height: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  font-size: 18px;
+  opacity: 0;
+  animation: fadein 0.5s forwards, fadeout 0.5s 3s forwards;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  padding: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+}
+
+.upload-icon {
+  font-size: 40px;
+  color: #aaa; /* Adjust color as needed */
+  margin-bottom: 0px;
+}
+  
+  

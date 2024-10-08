@@ -1,0 +1,100 @@
+.job-description-container {
+    margin: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  }
+
+.job-description-main {
+    min-height: calc(100vh - 190px);
+    padding: 50px;
+}
+
+.job-description-main h2 {
+    font-family: "Titillium Web", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+  
+  .job-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  
+  .job-form input,
+  .job-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .job-form textarea {
+    min-height: 100px;
+  }
+  
+  .save-btn {
+    font-weight: 600;
+    line-height: 125%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1.44px;
+    background: -webkit-linear-gradient(73deg, #030507 12.05%, #11293e 88.83%);
+    background: linear-gradient(180deg, #5b161a 0%, #3e0d10 100%);
+    color: #f5f3f0;
+    padding: 0.93125rem 2.175rem;
+    border: 1px solid rgba(244, 242, 240, .1);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .3);
+    border-radius: 3.75rem;
+    font-family: "Titillium Web", sans-serif;
+    margin-top: 30px;
+  }
+
+
+  .saved-job-descriptions {
+    margin: 30px 200px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  .saved-job-descriptions h3 {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .saved-job-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Titillium Web", sans-serif;
+    margin-top: 10px;
+  }
+  
+  .saved-job-table th, 
+  .saved-job-table td {
+    border: 5px solid #fff; /* Adjusted to match the border style from the reference */
+    padding: 10px; /* Similar padding to the reference table */
+  }
+  
+  .saved-job-table th {
+    background-color: #f4f4f4; /* Light background for headers like the reference */
+    text-align: left;
+    font-weight: bold; /* Emphasize header text */
+  }
+  
+  .saved-job-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row coloring */
+  }
+  
+
+  
+  

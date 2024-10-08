@@ -1,0 +1,223 @@
+.profilePage-container {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .profilePage-main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    min-height: calc(100vh - 200px);
+  }
+  
+  .profilePage-leftColumn, .profilePage-rightColumn {
+    flex: 1;
+    padding: 0 40px;
+  }
+  
+  .profilePage-infoSection {
+    margin-bottom: 15px;
+  }
+  
+  .profilePage-sectionTitle {
+    color: #111;
+    font-family: "Titillium Web", sans-serif;
+      font-weight: 300;
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  
+  .profilePage-infoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .profilePage-formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .profilePage-formLabel {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .profilePage-formInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .profilePage-creditsSection {
+    margin-bottom: 20px;
+  }
+  
+  .profilePage-creditsInfo p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: #080f17;
+    line-height: 2.25rem;
+  }
+  
+  .profilePage-creditsMessage {
+    margin-top: 10px;
+    color: #7f8c8d;
+  }
+  
+  .profilePage-paymentSection {
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .profilePage-paymentDescription {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+    line-height: 1.75rem;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .profilePage-managePaymentsButton {
+    font-weight: 600;
+    line-height: 125%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1.44px;
+    background: -webkit-linear-gradient(73deg, #030507 12.05%, #11293e 88.83%);
+    background: linear-gradient(180deg, #5b161a 0%, #3e0d10 100%);
+    color: #f5f3f0;
+    padding: 0.9rem 1.875rem;
+    border: 1px solid rgba(244, 242, 240, .1);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .3);
+    border-radius: 3.75rem;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  /* Mobile optimization for the profile page */
+@media (max-width: 768px) {
+    .profilePage-main {
+      flex-direction: column;
+      padding: 10px;
+      margin: 10px;
+    }
+  
+    .profilePage-leftColumn, .profilePage-rightColumn {
+      padding: 10px;
+      flex: none;
+      width: 100%;
+    }
+  
+    .profilePage-infoSection {
+      margin-bottom: 10px;
+    }
+  
+    .profilePage-sectionTitle {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+  
+    .profilePage-infoForm {
+      gap: 15px;
+    }
+  
+    .profilePage-formLabel {
+      font-size: 14px;
+    }
+  
+    .profilePage-formInput {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .profilePage-creditsSection {
+      margin-bottom: 15px;
+    }
+  
+    .profilePage-creditsInfo p {
+      font-size: 0.9rem;
+      line-height: 2rem;
+    }
+  
+    .profilePage-creditsMessage {
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .profilePage-paymentDescription {
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 1.5rem;
+    }
+  
+    .profilePage-managePaymentsButton {
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+  
+  /* Additional optimization for very small screens (mobile devices) */
+  @media (max-width: 480px) {
+    .profilePage-main {
+      padding: 5px;
+      margin: 5px;
+    }
+  
+    .profilePage-leftColumn, .profilePage-rightColumn {
+      padding: 5px;
+    }
+  
+    .profilePage-sectionTitle {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    .profilePage-infoForm {
+      gap: 10px;
+    }
+  
+    .profilePage-formLabel {
+      font-size: 12px;
+    }
+  
+    .profilePage-formInput {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .profilePage-creditsInfo p {
+      font-size: 0.8rem;
+      line-height: 1.8rem;
+    }
+  
+    .profilePage-creditsMessage {
+      margin-top: 5px;
+      font-size: 0.8rem;
+    }
+  
+    .profilePage-paymentDescription {
+      font-size: 12px;
+      margin-bottom: 10px;
+      line-height: 1.4rem;
+    }
+  
+    .profilePage-managePaymentsButton {
+      font-size: 0.85rem;
+      padding: 0.6rem 1.2rem;
+      margin-bottom: 20px;
+    }
+  }
+  

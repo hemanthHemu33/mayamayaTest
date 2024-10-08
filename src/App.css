@@ -1,0 +1,72 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fFF; /* Light background for contrast */
+  color: #333; /* Dark gray for readable text */
+  position: relative; /* Ensure the body or main container can be the reference for absolute positioning */
+}
+
+.header {
+  display: none;
+}
+
+/* Header Styles 
+.header {
+  background-color: rgba(0, 0, 0, 0); 
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  position: fixed; 
+  width: 100%; 
+  top: 0; 
+  left: 0;
+  z-index: 1000; 
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+}*/
+
+/* Main Content Styles */
+main {
+  padding: 0px 0; /* Add padding to accommodate the fixed header */
+  margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+footer p {
+  font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 2.25rem;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 50px;
+  }
+
+  footer p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}

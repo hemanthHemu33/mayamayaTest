@@ -1,0 +1,4 @@
+{
+  "AUTH_BASE_URL": "https://api-mayamaya-auth.azurewebsites.net",
+  "DATASCIENCE_API_SUITE": "https://datascience-backend.azurewebsites.net"
+}

@@ -1,0 +1,148 @@
+/* General modal styling */
+.options-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.options-popup-content {
+    background-color: white;
+    padding: 80px;
+    border-radius: 15px;
+    width: 1000px;
+    min-height: 420px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* For positioning close button */
+}
+
+.options-popup-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Close button */
+.options-popup-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333; /* Color of close button */
+}
+
+/* Buttons styling */
+.options-popup-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.options-popup-button {
+    background-color: #eee;
+    color: #1f1f1f;
+    border: 0px solid #672024;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 10px;
+    max-width: 250px;
+    min-height: 150px;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.options-popup-button:hover {
+    background-color: #eee;
+}
+
+/* Job description dropdown */
+.options-popup-jobdesc {
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.options-popup-label {
+    font-weight: 500;
+    display: block;
+    margin: 20px;
+    color: #030507;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.options-popup-dropdown {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f3f0;
+    font-size: 16px;
+    border: 0px solid #555;
+    border-radius: 5px;
+    font-family: "Titillium Web", sans-serif;
+}
+
+/* New Job Description Input */
+.options-popup-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Margin for spacing */
+}
+
+/* Create Job Description Button */
+.options-popup-create-button {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #3e0d10;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Titillium Web", sans-serif;
+    width: 300px;
+}
+
+
+/* Action buttons */
+.options-popup-actions {
+    display: flex;
+    justify-content: center; /* Centering the proceed button */
+}
+
+/* Proceed button */
+.options-popup-proceed-button {
+    font-weight: 600;
+    line-height: 125%;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 1.44px;
+    background: -webkit-linear-gradient(73deg, #030507 12.05%, #11293e 88.83%);
+    background: linear-gradient(180deg, #5b161a 0%, #3e0d10 100%);
+    color: #f5f3f0;
+    padding: 1.03125rem 2.275rem;
+    border: 1px solid rgba(244, 242, 240, .1);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .3);
+    border-radius: 3.75rem;
+    font-family: "Titillium Web", sans-serif;
+}
+
+/* Selected button color */
+.options-popup-button.selected {
+    background-color: #fff; /* Different background color for selected option */
+    color: #333; /* Text color */
+    border: 2px solid #333; /* Optional border to highlight the selected option */
+}

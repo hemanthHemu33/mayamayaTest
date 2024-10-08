@@ -1,0 +1,229 @@
+.historyPage-container {
+    padding: 0px;
+    min-height: 90vh;
+  }
+  
+  .historyPage-main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+    min-height: calc(100vh - 190px);
+  }
+  
+  .historyPage-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 110%;
+    color: #080f17;
+    letter-spacing: -1.6px;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .historyPage-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .historyPage-table th, .historyPage-table td {
+    border: 5px solid #fff;
+    padding: 10px;
+  }
+  
+  .historyPage-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  .historyPage-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .historyPage-fileList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .historyPage-fileList li {
+    margin-bottom: 5px;
+  }
+  
+  .historyPage-downloadButton {
+    font-weight: 500;
+    line-height: 125%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1.44px;
+    background: -webkit-linear-gradient(73deg, #030507 12.05%, #11293e 88.83%);
+    background: linear-gradient(180deg, #5b161a 0%, #3e0d10 100%);
+    color: #f5f3f0;
+    padding: 0.9rem 1.575rem;
+    border: 1px solid rgba(244, 242, 240, .1);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .3);
+    border-radius: 3.75rem;
+    font-family: "Titillium Web", sans-serif;
+  }
+
+  /* Mobile Optimization for History Page */
+
+@media (max-width: 768px) {
+    .historyPage-container {
+      padding: 0 0rem; /* Add some padding for smaller screens */
+      min-height: auto; /* Remove minimum height restriction */
+    }
+  
+    .historyPage-main {
+      padding: 20px 1rem; /* Reduce padding for mobile screens */
+    }
+  
+    .historyPage-title {
+      font-size: 1.5rem; /* Reduce font size for mobile */
+      margin-bottom: 20px; /* Reduce margin for mobile */
+    }
+  
+    .historyPage-table-wrapper {
+      overflow-x: auto; /* Enable horizontal scrolling for table */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+  
+    .historyPage-table {
+      font-size: 0.875rem; /* Reduce font size for better readability */
+      min-width: 600px; /* Ensure table does not shrink too much */
+    }
+  
+    .historyPage-table th, .historyPage-table td {
+      padding: 8px; /* Reduce padding for smaller screens */
+    }
+  
+    .historyPage-table th {
+      font-size: 0.9rem; /* Adjust font size for table headers */
+    }
+  
+    .historyPage-table tr:nth-child(even) {
+      background-color: #fafafa; /* Slightly lighter background for rows */
+    }
+  
+    .historyPage-fileList {
+      padding: 0;
+      margin: 0;
+    }
+  
+    .historyPage-fileList li {
+      font-size: 0.875rem; /* Adjust font size for list items */
+    }
+  
+    .historyPage-downloadButton {
+      font-size: 0.875rem; /* Reduce font size for button */
+      padding: 0.75rem 1.25rem; /* Adjust padding for button */
+    }
+  }
+  
+  /* For extra-small screens (phones in portrait mode) */
+  @media (max-width: 480px) {
+    .historyPage-title {
+      font-size: 1.25rem; /* Further reduce font size for very small screens */
+      margin-bottom: 15px; /* Adjust margin for smaller screens */
+    }
+  
+    .historyPage-table {
+      font-size: 0.75rem; /* Reduce font size for very small screens */
+      min-width: 500px; /* Ensure table does not shrink too much */
+    }
+  
+    .historyPage-table th, .historyPage-table td {
+      padding: 6px; /* Further reduce padding */
+    }
+  
+    .historyPage-downloadButton {
+      font-size: 0.75rem; /* Reduce font size for button */
+      padding: 0.6rem 1rem; /* Adjust padding for very small screens */
+    }
+  }
+  
+
+  .pagination {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+  }
+  
+  .pagination-button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-button.active {
+    background-color: #5b161a;
+    color: #fff;
+  }
+
+  /* History.css */
+
+.loader {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #672024; /* Red */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Popup Window */
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 400px;
+  z-index: 1000;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+/* Close Button */
+.popup-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.popup-close-button:hover {
+  color: #ff0000;
+}
+
+
+  
+  
